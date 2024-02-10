@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Vertical Tabs</title>
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  /* margin: 0;
+  padding: 0; */
+}
+.neighbortab-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.neighbortab {
+  cursor: pointer;
+  padding: 10px;
+  width: 150px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.neighbortab:hover {
+  background-color: #ceae92;
+  color: #ffffff;
+}
+.neighborhoodsimage-container {
+  margin-top: 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  overflow: hidden;
+  justify-content: flex-start;
+}
+.neighborhoodsimage-container img {
+  max-width: 45%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.content-container {
+  display: flex;
+  flex-direction: column;
+}
+.neighborcontent {
+  display: none;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+.neighborcontent.show {
+  display: block;
+}
+
+</style>
+<body>
+
+<div class="neighbortab-container">
+  <div class="neighbortab" onclick="showContent(1)">Nearby</div>
+  <div class="neighborcontent" id="neighborcontent1">
+    <h2 class="neighborheading" style= " font-size: 28px; font-family: Work Sans; font-weight: 500; margin: 5px; margin-bottom: 10px;">Bustling town & 50 shades of life</h2>
+        <p class="neighborheading" style= " font-size: 16px; font-family: Work Sans; margin: 5px;">
+          Take a walk in the neighbourhood leading to the bustling towns, travel to  the villages nearby, board a local bus; catch a glimpse of  the community pond where children and the youth dive deep cutting through the aquamarine water like pros. Feel the rains, an indispensable part of life here. Indulge your desire; 
+          treat yourself to an array of lip-smacking cakes, confectionaries…join the youths in sports for it’s the opium of the masses here.</p>
+        <div class="neighborhoodsimage-container">
+          <img src="./Backery.webp" alt="Neighborhood" />
+          <img src="./vollyball.webp" alt="Neighborhood" />
+       
+        </div>
+  </div>
+
+  <div class="neighbortab" onclick="showContent(2)">Rivers & beaches</div>
+  <div class="neighborcontent" id="neighborcontent2">
+    <h2 class="neighborheading" style= " font-size: 28px; font-family: Work Sans; font-weight: 500; margin: 5px;">River, beaches & drives</h2>
+        <p class="neighborheading" style= " font-size: 16px; font-family: Work Sans; margin: 5px;">
+          Converse and explore the nature around. With River Baveli that carries the spirit of the Western Ghats in the neighbourhood 
+          and beaches an hour’s drive, strike a conversation with the nature around and open up your heart to the beauty. Drive through and enter magical landscapes.</p>
+        <div class="neighborhoodsimage-container">
+          <img src="./River (1).webp" alt="River" />
+          <img src="./Beach.webp" alt="River" />
+        
+        </div>
+  </div>
+
+  <div class="neighbortab" onclick="showContent(3)">Aralam</div>
+  <div class="neighborcontent" id="neighborcontent3">
+    <h2 class="neighborheading" style= " font-size: 28px; font-family: Work Sans; font-weight: 500; margin: 5px;">Aralam Wildlife Sanctuary</h2>
+        <p class="neighborheading" style= " font-size: 16px; font-family: Work Sans; margin: 5px;">
+          A mere half hour drive from Saarang is Aralam Wildlife Sanctuary. Located on the western slopes of the Western Ghats, and adjoining forests of Brahmagiri Hills of Kodagu, Karnataka, Thirunelli Hills of Wayanad, and nourished by the River Cheenkanni, Aralam Wildlife Sanctuary is a rich and safe haven to a myriad variety of flora and fauna: 263 species of butterflies, 98 dragonflies and 
+          damselflies, 45 fishes, 41 amphibians, 63 reptiles, 241 birds, 54 mammals and 1,009 varieties of plants. Experience nature up close.</p>
+        <div class="neighborhoodsimage-container">
+          <img src="./forest-2.webp" alt="forest" />
+          <img src="./forest-1-1.webp" alt="forest" />
+  </div>
+  </div>
+
+  <div class="neighbortab" onclick="showContent(4)">Tab 4</div>
+  <div class="neighborcontent" id="neighborcontent4">
+    <h2 class="neighborheading" style= " font-size: 28px; font-family: Work Sans; font-weight: 500; margin: 5px;">Theyyam & Kalaripayattu</h2>
+        <p class="neighborheading" style= " font-size: 16px; font-family: Work Sans; margin: 5px;">
+          Experience the rich and vibrant culture of the region where people live harmoniously and the secular fabric is strong. Witness the ritual art form Theyyam, predominantly performed in the north Malabar region of Kerala, especially Kannur. A visual splendour, wherein man adorns the guise of gods, goddesses and spirits of ancestors and pays obeisance to them through spirited dance, 
+          music and mime. Take a step, wield a sword and know Kalaripayattu, the traditional Indian martial art form, first hand.</p>
+          <div class="neighborhoodsimage-container">
+            <img src="./God-1.webp" alt="God-1" />
+            <img src="./Kalari-payattu-1.webp" alt="Kalari-payattu-1" />
+          </div>
+  </div>
+
+  <div class="neighbortab" onclick="showContent(5)">Tab 5</div>
+  <div class="neighborcontent" id="neighborcontent5">
+    <h2 class="neighborheading" style= " font-size: 28px; font-family: Work Sans; font-weight: 500; margin: 5px;">Education</h2>
+    <p class="neighborheading" style= " font-size: 16px; font-family: Work Sans; margin: 5px;">
+      Kerala holds the best record for providing quality education to students across the nation, to this day. With Kerala 
+      continuing to be the most educated state in India, a number of schools adhering to various syllabi are located around Saarang</p>
+      <div class="neighborhoodsimage-container">
+        <img src="./bharatiya-vidya-bhavan-talap-kannur-primary-schools-0e13upz73m.jpg" alt="bharatiya-vidya-bhavan-talap-kannur-primary-schools-0e13upz73m" />
+        <img src="./Kuthuparamaba_Higher_Secondary_School_Thokkilangadi_3.jpg" alt="Kuthuparamaba_Higher_Secondary_School_Thokkilangadi_3" />
+  </div>
+  </div>
+
+  <div class="neighbortab" onclick="showContent(6)">Tab 6</div>
+  <div class="neighborcontent" id="neighborcontent6">
+    <h2 class="neighborheading" style= " font-size: 28px; font-family: Work Sans; font-weight: 500; margin: 5px;">Medical care</h2>
+  <p class="neighborheading" style= " font-size: 16px; font-family: Work Sans; margin: 5px;">
+    With a buoyant daily life grounded in secular values, Kerala’s performance in both health and education continues to be par excellent in the country. Moreover, in a place such as Saarang where there is quality air, 
+    water and food, the diseases are kept at bay. However, Saarang is well connected to both health care centres and hospitals.</p>
+    <div class="neighborhoodsimage-container">
+      <img src="./hospital-kannur.jpg" alt="hospital-kannur" />
+      <img src="./Hospital.webp" alt="Hospital" />
+  </div>
+  </div>
+</div>
+
+<script>
+//     function showContent(tabNumber) {
+//   // Hide all content elements
+//   const allContent = document.querySelectorAll('.neighborcontent');
+//   allContent.forEach(content => {
+//     content.classList.remove('show');
+//   });
+
+//   // Show the selected content
+//   const selectedContent = document.getElementById(`neighborcontent${tabNumber}`);
+//   if (selectedContent) {
+//     selectedContent.classList.add('show');
+//   }
+// }
+    // function showContent(tabNumber) {
+    //     // Get the selected content
+    //     const selectedContent = document.getElementById(`neighborcontent${tabNumber}`);
+
+    //     // Toggle the visibility of the selected content
+    //     if (selectedContent) {
+    //         const isContentVisible = selectedContent.classList.toggle('show');
+            
+    //         // Hide all other content elements if the selected content is visible
+    //         if (isContentVisible) {
+    //             const allContent = document.querySelectorAll('.neighborcontent');
+    //             allContent.forEach(content => {
+    //                 if (content !== selectedContent) {
+    //                     content.classList.remove('show');
+    //                 }
+    //             });
+    //         }
+    //     }
+    // }
+
+  
+    // Function to toggle visibility of content
+    function showContent(tabNumber) {
+        // Get the selected content
+        const selectedContent = document.getElementById(`neighborcontent${tabNumber}`);
+
+        // Toggle the visibility of the selected content
+        if (selectedContent) {
+            const isContentVisible = selectedContent.classList.toggle('show');
+            
+            // Hide all other content elements if the selected content is visible
+            if (isContentVisible) {
+                const allContent = document.querySelectorAll('.neighborcontent');
+                allContent.forEach(content => {
+                    if (content !== selectedContent) {
+                        content.classList.remove('show');
+                    }
+                });
+            }
+        }
+    }
+
+    // Make the first tab active by default
+    document.addEventListener('DOMContentLoaded', function () {
+        showContent(1);
+    });
+
+
+
+</script>
+</body>
+</html>

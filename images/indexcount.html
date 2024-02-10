@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .counting-container {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+  <title>Reusable Count Animation</title>
+</head>
+<body>
+
+<div id="distance1" class="counting-container">0</div>
+<div id="distance2" class="counting-container">0</div>
+<div id="distance3" class="counting-container">0</div>
+
+<script>
+  function startCountAnimation(targetElement, targetCount, interval) {
+    let counts = setInterval(updated, interval);
+    let upto = 0;
+
+    function updated() {
+      let count = document.getElementById(targetElement);
+      count.innerHTML = ++upto;
+
+      if (upto === targetCount) {
+        clearInterval(counts);
+      }
+    }
+  }
+
+  function handleIntersection(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Start the counting animation for distance1
+        startCountAnimation("distance1", 25, 70);
+
+        // Start the counting animation for distance2
+        startCountAnimation("distance2", 50, 70);
+
+        // Start the counting animation for distance3
+        startCountAnimation("distance3", 75, 70);
+
+        observer.disconnect(); // Stop observing once the counting animations start
+      }
+    });
+  }
+
+  // Create an observer to watch for the div elements
+  const observer = new IntersectionObserver(handleIntersection);
+  const targetElements = document.querySelectorAll('.counting-container');
+  targetElements.forEach(element => observer.observe(element));
+</script>
+
+</body>
+</html>

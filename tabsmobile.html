@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotated Sticky Enquire Now Button</title>
+  <style>
+.planstabs-container {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  max-width: 100%;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+.planstabs {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 40px;
+  text-align: center;
+}
+
+.planstab {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 015px;
+  width: 175px;
+  margin: 5px;
+  font-family: Work Sans;
+  text-align: center;
+  background-color: #e8e1dc;
+  border: 1px solid #e8e1dc;
+  border-radius: 5px;
+}
+
+.planstab:hover {
+  background-color: #ceae92;
+}
+.planstab.active {
+  background-color: #ceae92;
+  display: flex;
+}
+.planscontent {
+  display: none;
+  margin-top: 0px;
+  background-color: #ffffff;
+}
+
+.active {
+  display: inline-block;
+}
+
+.plansimage-container {
+  margin-top: 0px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.plansimage-container img {
+  max-width: 60%;
+  height: auto;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  </style>
+  <body>
+    <div class="planstabs-container">
+        <ul class="planstabs">
+          <li class="planstab active" onclick="showTab('planstab1')">Masterplan</li>
+          <li class="planstab" onclick="showTab('planstab2')">Phase 1 master plan</li>
+          <li class="planstab" onclick="showTab('planstab3')">Phase 1 Plot Details</li>
+        </ul>
+      </div>
+      
+      <div class="plans-container">
+        <div id="planstab1" class="planscontent active">
+          <div class="plansimage-container">
+            <img src="./images/master plan.png" alt="Image 1" />
+          </div>
+        </div>
+      
+        <div id="planstab2" class="planscontent">
+          <div class="plansimage-container">
+            <img src="./images/GoodEarth_Saarang_Print_Spiralbound_1-copy-page-3 phase 1 plan.png" alt="Image 3" />
+          </div>
+        </div>
+      
+        <div id="planstab3" class="planscontent">
+          <div class="plansimage-container">
+            <img src="./images/GoodEarth_Saarang_Plot-details-2048x1510.webp" alt="Image 6" />
+          </div>
+        </div>
+      </div>
+      <script>
+        function showTab(tabId) {
+  // Hide all tabs
+  var tabs = document.getElementsByClassName("planscontent");
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].style.display = "none";
+  }
+
+  // Show the selected tab
+  document.getElementById(tabId).style.display = "block";
+
+  // Remove 'active' class from all tabs
+  var tabButtons = document.getElementsByClassName("planstab");
+  for (var i = 0; i < tabButtons.length; i++) {
+    tabButtons[i].classList.remove("active");
+  }
+
+  // Add 'active' class to the clicked tab
+  event.currentTarget.classList.add("active");
+}
+
+      </script>
+  </body>

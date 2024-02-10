@@ -1,0 +1,318 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabbed Images</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        /* height: 100vh; */
+        margin: 0;
+      }
+
+      .neighborhoodstabs-container {
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 75%;
+        margin-bottom: 20px;
+      }
+
+      .neighborhoodstabs {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        /* max-width: 75%; */
+      }
+
+      .neighborhoodstab {
+        cursor: pointer;
+        padding: 15px;
+        width: 150px;
+        
+        margin: 5px;
+        background-color: #f4efeb;
+        border: 1px solid #f4efeb;
+        border-radius: 5px;
+      }
+
+      .neighborhoodstab:hover {
+        background-color: #ceae92;
+      }
+      .neighborhoodstab.active {
+        background-color: #ceae92;
+        display: flex;
+        display: flex;
+        /* flex-wrap: wrap; */
+        justify-content: flex-start;
+        /* align-items: flex-start; */
+      }
+      .neighborhoodscontent {
+        display: none;
+        margin-top: 0px;
+        max-width: 75%;
+      }
+
+      .active {
+      display: inline-block;
+      }
+
+      .neighborhoodsimage-container {
+        margin-top: 0px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        max-width: 100%;
+        overflow: hidden;
+        justify-content: flex-start;
+      }
+
+      .neighborhoodsimage-container img {
+        max-width: 35%;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="neighborhoodstabs-container">
+      <ul class="neighborhoodstabs">
+        <li class="neighborhoodstab active" onclick="showTab('neighbortab1')">Nearby</li>
+        <li class="neighborhoodstab" onclick="showTab('neighbortab2')">Rivers & beaches</li>
+        <li class="neighborhoodstab" onclick="showTab('neighbortab3')">Wildlife</li>
+        <li class="neighborhoodstab" onclick="showTab('neighbortab4')">Vibrant culture</li>
+        <li class="neighborhoodstab" onclick="showTab('neighbortab5')">Education</li>
+        <li class="neighborhoodstab" onclick="showTab('neighbortab6')">Medical care</li>
+      </ul>
+    </div>
+
+    <div id="neighbortab1" class="neighborhoodscontent active">
+      <h2 class="neighborheading" style= " font-size: 28px; font-family: Work Sans; font-weight: 500; margin: 5px; margin-bottom: 10px;">Bustling town & 50 shades of life</h2>
+      <p class="neighborheading" style= " font-size: 16px; font-family: Work Sans; margin: 5px;">
+        Take a walk in the neighbourhood leading to the bustling towns, travel to  the villages nearby, board a local bus; catch a glimpse of  the community pond where children and the youth dive deep cutting through the aquamarine water like pros. Feel the rains, an indispensable part of life here. Indulge your desire; 
+        treat yourself to an array of lip-smacking cakes, confectionaries…join the youths in sports for it’s the opium of the masses here.</p>
+      <div class="neighborhoodsimage-container">
+        <img src="./images/Backery.webp" alt="Neighborhood" />
+        <img src="./images/vollyball.webp" alt="Neighborhood" />
+     
+      </div>
+    </div>
+
+    <div id="neighbortab2" class="neighborhoodscontent">
+      <h2 class="neighborheading" style= " font-size: 28px; font-family: Work Sans; font-weight: 500; margin: 5px;">River, beaches & drives</h2>
+      <p class="neighborheading" style= " font-size: 16px; font-family: Work Sans; margin: 5px;">
+        Converse and explore the nature around. With River Baveli that carries the spirit of the Western Ghats in the neighbourhood 
+        and beaches an hour’s drive, strike a conversation with the nature around and open up your heart to the beauty. Drive through and enter magical landscapes.</p>
+      <div class="neighborhoodsimage-container">
+        <img src="./images/River (1).webp" alt="River" />
+        <img src="./images/Beach.webp" alt="River" />
+      
+      </div>
+    </div>
+
+    <div id="neighbortab3" class="neighborhoodscontent">
+      <h2 class="neighborheading" style= " font-size: 28px; font-family: Work Sans; font-weight: 500; margin: 5px;">Aralam Wildlife Sanctuary</h2>
+      <p class="neighborheading" style= " font-size: 16px; font-family: Work Sans; margin: 5px;">
+        A mere half hour drive from Saarang is Aralam Wildlife Sanctuary. Located on the western slopes of the Western Ghats, and adjoining forests of Brahmagiri Hills of Kodagu, Karnataka, Thirunelli Hills of Wayanad, and nourished by the River Cheenkanni, Aralam Wildlife Sanctuary is a rich and safe haven to a myriad variety of flora and fauna: 263 species of butterflies, 98 dragonflies and 
+        damselflies, 45 fishes, 41 amphibians, 63 reptiles, 241 birds, 54 mammals and 1,009 varieties of plants. Experience nature up close.</p>
+      <div class="neighborhoodsimage-container">
+        <img src="./images/forest-2.webp" alt="forest" />
+        <img src="./images/forest-1-1.webp" alt="forest" />
+</div>
+</div>
+
+      <div id="neighbortab4" class="neighborhoodscontent">
+        <h2 class="neighborheading" style= " font-size: 28px; font-family: Work Sans; font-weight: 500; margin: 5px;">Theyyam & Kalaripayattu</h2>
+      <p class="neighborheading" style= " font-size: 16px; font-family: Work Sans; margin: 5px;">
+        Experience the rich and vibrant culture of the region where people live harmoniously and the secular fabric is strong. Witness the ritual art form Theyyam, predominantly performed in the north Malabar region of Kerala, especially Kannur. A visual splendour, wherein man adorns the guise of gods, goddesses and spirits of ancestors and pays obeisance to them through spirited dance, 
+        music and mime. Take a step, wield a sword and know Kalaripayattu, the traditional Indian martial art form, first hand.</p>
+        <div class="neighborhoodsimage-container">
+          <img src="./images/God-1.webp" alt="God-1" />
+          <img src="./images/Kalari-payattu-1.webp" alt="Kalari-payattu-1" />
+
+  </div>
+  </div>
+
+  <div id="neighbortab5" class="neighborhoodscontent">
+    <h2 class="neighborheading" style= " font-size: 28px; font-family: Work Sans; font-weight: 500; margin: 5px;">Education</h2>
+  <p class="neighborheading" style= " font-size: 16px; font-family: Work Sans; margin: 5px;">
+    Kerala holds the best record for providing quality education to students across the nation, to this day. With Kerala 
+    continuing to be the most educated state in India, a number of schools adhering to various syllabi are located around Saarang</p>
+    <div class="neighborhoodsimage-container">
+      <img src="./images/bharatiya-vidya-bhavan-talap-kannur-primary-schools-0e13upz73m.jpg" alt="bharatiya-vidya-bhavan-talap-kannur-primary-schools-0e13upz73m" />
+      <img src="./images/Kuthuparamaba_Higher_Secondary_School_Thokkilangadi_3.jpg" alt="Kuthuparamaba_Higher_Secondary_School_Thokkilangadi_3" />
+
+</div>
+</div>
+
+<div id="neighbortab6" class="neighborhoodscontent">
+  <h2 class="neighborheading" style= " font-size: 28px; font-family: Work Sans; font-weight: 500; margin: 5px;">Medical care</h2>
+<p class="neighborheading" style= " font-size: 16px; font-family: Work Sans; margin: 5px;">
+  With a buoyant daily life grounded in secular values, Kerala’s performance in both health and education continues to be par excellent in the country. Moreover, in a place such as Saarang where there is quality air, 
+  water and food, the diseases are kept at bay. However, Saarang is well connected to both health care centres and hospitals.</p>
+  <div class="neighborhoodsimage-container">
+    <img src="./images/hospital-kannur.jpg" alt="hospital-kannur" />
+    <img src="./images/Hospital.webp" alt="Hospital" />
+
+</div>
+    </div>
+
+    <script>
+      function showTab(tabId) {
+        // Hide all tabs
+        var tabs = document.getElementsByClassName("neighborhoodscontent");
+        for (var i = 0; i < tabs.length; i++) {
+          tabs[i].style.display = "none";
+        }
+
+        // Show the selected tab
+        document.getElementById(tabId).style.display = "block";
+
+        // Remove 'active' class from all tabs
+        var tabButtons = document.getElementsByClassName("neighborhoodstab");
+        for (var i = 0; i < tabButtons.length; i++) {
+          tabButtons[i].classList.remove("active");
+        }
+
+        // Add 'active' class to the clicked tab
+        event.currentTarget.classList.add("active");
+      }
+    </script>
+
+    
+    
+  </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Vertical Tabs</title>
+</head>
+<style>
+
+.planstabs-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.planstab {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.planstab:hover {
+  background-color: #ddd;
+}
+
+.planscontentactive {
+  display: flex;
+  flex-direction: column;
+}
+
+.planscontent {
+  display: none;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.planscontent.show {
+  display: block;
+  max-width: 60%;
+}
+
+.plansimage-container{
+  width: 60%;
+}
+
+</style>
+<body>
+  <div class="planstabs-container">
+    <div class="planstab active" onclick="showTab1('planstab1')">Masterplan</div>
+    <div id="planstab1" class="planscontentactive">
+      <div class="plansimage-container">
+        <img src="./images/master plan.png" alt="Image 1" />
+     
+      </div>
+    </div>
+  
+    <div class="planstab" onclick="showTab1('planstab2')">Phase 1 master plan</div>
+    <div id="planstab2" class="planscontent">
+      <div class="plansimage-container">
+        <img src="./images/GoodEarth_Saarang_Print_Spiralbound_1-copy-page-3 phase 1 plan.png" alt="Image 3" />
+      
+      </div>
+    </div> -->
+  
+    <!-- <div class="tab" onclick="showContent(3)">Tab 3</div>
+    <div class="content" id="content3">Content for Tab 3</div>
+  
+    <div class="tab" onclick="showContent(4)">Tab 4</div>
+    <div class="content" id="content4">Content for Tab 4</div>
+  
+    <div class="tab" onclick="showContent(5)">Tab 5</div>
+    <div class="content" id="content5">Content for Tab 5</div>
+  
+    <div class="tab" onclick="showContent(6)">Tab 6</div>
+    <div class="content" id="content6">Content for Tab 6</div>
+  </div> -->
+  <!-- <script>
+    function showContent(tabNumber) {
+    // Hide all content elements
+    const allContent = document.querySelectorAll('.planscontent');
+    allContent.forEach(content => {
+      content.classList.remove('show');
+    });
+  
+    // Show the selected content
+    const selectedContent = document.getElementById(`planscontent${tabNumber}`);
+    if (selectedContent) {
+      selectedContent.classList.add('show');
+    }
+  }
+  
+  </script>
+  </body>
+  </html> -->
+  
+  
+<!-- <script>
+  function showContent(tabNumber) {
+  // Hide all content elements
+  const allContent = document.querySelectorAll('.content');
+  allContent.forEach(content => {
+    content.classList.remove('show');
+  });
+
+  // Show the selected content
+  const selectedContent = document.getElementById(`content${tabNumber}`);
+  if (selectedContent) {
+    selectedContent.classList.add('show');
+  }
+} -->
+
+<!-- </script>
+</body>
+</html> -->

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotated Sticky Enquire Now Button</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .sticky-button {
+      background-color: #874545;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      transition: transform 0.5s ease; /* Add a transition for a smoother rotation effect */
+    }
+
+    .sticky-button:hover {
+      background: color #874545;
+    }
+  </style>
+</head>
+<body>
+  <!-- Rotated Sticky Enquire Now Button -->
+  <div id="enquireButton" class="sticky-button" onclick="rotateButton()">
+    Enquire Now
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Function to rotate the button
+      function rotateButton() {
+        const enquireButton = document.getElementById("enquireButton");
+        enquireButton.style.transform = 'rotate(-90deg)';
+      }
+
+      // Update button position on scroll or resize
+      window.addEventListener("scroll", updateButtonPosition);
+      window.addEventListener("resize", updateButtonPosition);
+
+      // Function to update the position of the button
+      function updateButtonPosition() {
+        const windowHeight = window.innerHeight;
+        const buttonHeight = enquireButton.offsetHeight;
+        const scrollY = window.scrollY;
+
+        // Calculate the top position for the button to be vertically centered
+        const topPosition = windowHeight / 2 - buttonHeight / 2;
+
+        // Set the top position of the button
+        enquireButton.style.top = `${topPosition + scrollY}px`;
+      }
+    });
+  </script>
+</body>
+</html>
